@@ -1,6 +1,6 @@
 using System.Security.Cryptography;
 using System.Text;
-using MediatR;
+using ProjectName.Application.Mediator;
 using ProjectName.Application.Abstractions;
 using ProjectName.Application.DTOs;
 using ProjectName.Application.Interfaces;

@@ -1,10 +1,10 @@
 using FluentValidation;
 using FluentValidation.AspNetCore;
-using MediatR;
 using Microsoft.AspNetCore.Antiforgery;
 using Microsoft.AspNetCore.Mvc;
 using ProjectName.Api.Extensions;
 using ProjectName.Api.Middlewares;
+using ProjectName.Application.DependencyInjection;
 using ProjectName.Infrastructure.Logging;
 using ProjectName.Infrastructure.Services;
 
@@ -15,7 +15,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddInfrastructure(builder.Configuration);
-builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblyContaining<ProjectName.Application.UseCases.Products.CreateProduct.CreateProductCommand>());
+builder.Services.AddApplicationMediator(typeof(ProjectName.Application.UseCases.Products.CreateProduct.CreateProductCommand).Assembly);
 builder.Services.AddValidatorsFromAssemblyContaining<ProjectName.Application.Validators.CreateProductCommandValidator>();
 builder.Services.AddFluentValidationAutoValidation();
 builder.Services.AddSecurityDefaults(builder.Configuration);
