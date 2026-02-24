@@ -1,4 +1,4 @@
-using MediatR;
+using ProjectName.Application.Mediator;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ProjectName.Application.UseCases.Products.CreateProduct;

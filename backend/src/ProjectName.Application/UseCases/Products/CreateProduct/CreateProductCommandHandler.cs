@@ -1,4 +1,4 @@
-using MediatR;
+using ProjectName.Application.Mediator;
 using ProjectName.Application.Abstractions;
 using ProjectName.Application.DTOs;
 using ProjectName.Domain.Entities;
